@@ -5,7 +5,7 @@ var bodyParser = require('body-parser')
 var mainRoutes = require('./routes/main')
 
 var app = express()
-mongoose.connect('mongodb://localhost:27017/article')
+//mongoose.connect('mongodb://localhost:27017/article')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -15,6 +15,6 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs')
 app.use(mainRoutes)
 
-app.listen(8080, function() {
-    console.log('Node.js listening on port ' + 8080)
+app.listen(3000, function() {
+    console.log('Node.js listening on port ' + 3000)
 })
